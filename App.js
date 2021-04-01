@@ -15,7 +15,7 @@ import {LOGIN} from './queries';
 import * as Permissions from 'expo-permissions'
 
 const client = new ApolloClient({
-  uri: "http://52.251.50.212:4000/",
+  uri: DATABASE_URL,
   cache: new InMemoryCache(),
 });
 
