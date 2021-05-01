@@ -14,8 +14,9 @@ import { ApolloClient, ApolloProvider, InMemoryCache, useMutation, useQuery, use
 import {LOGIN} from './queries';
 import * as Permissions from 'expo-permissions'
 
+const URL = "http://52.251.50.212:4000/";
 const client = new ApolloClient({
-  uri: DATABASE_URL,
+  uri: URL,
   cache: new InMemoryCache(),
 });
 

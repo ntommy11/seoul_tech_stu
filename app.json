@@ -2,7 +2,7 @@
   "expo": {
     "name": "미래융합대학 도우미",
     "slug": "seoultech_app",
-    "version": "1.0.5",
+    "version": "1.0.10",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -24,7 +24,7 @@
       },
       "bundleIdentifier": "com.futurestu.helper",
       "icon": "./assets/icon.png",
-      "buildNumber":"1.0.5"
+      "buildNumber":"1.0.10"
     },
     "android": {
       "adaptiveIcon": {
@@ -37,7 +37,7 @@
         "googleMobileAdsAppId": "ca-app-pub-8233357974153609~4259386009"
       },
       "icon": "./assets/icon.png",
-      "versionCode": 4
+      "versionCode": 10
     },
     "web": {
       "favicon": "./assets/favicon.png"

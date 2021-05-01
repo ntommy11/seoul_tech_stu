@@ -483,7 +483,7 @@ export default function ScheduleScreen({navigation}) {
       // 시간표 탭에 돌아올 때마다 5초 전면 광고 
       if(user_meta.grade >= 2){  // 유저 등급이 0,1이 아니라면 발생     
         AdMobInterstitial.setAdUnitID(AD_ID).then(()=>{
-          AdMobInterstitial.requestAdAsync().then(()=>AdMobInterstitial.showAdAsync());
+          AdMobInterstitial.requestAdAsync({servePersonalizedAds:true}).then(()=>AdMobInterstitial.showAdAsync());
         });
       }
       colorIndex=0;
