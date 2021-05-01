@@ -14,8 +14,7 @@ import { createStackNavigator,HeaderBackButton } from '@react-navigation/stack';
 
 import { Ionicons, FontAwesome, AntDesign,Entypo,Feather,MaterialCommunityIcons  } from '@expo/vector-icons';
 import { AuthContext, UserContext,IdContext, MemoContext } from '../components/context';
-import AsyncStorage from '@react-native-community/async-storage';
- 
+import AsyncStorage from '@react-native-async-storage/async-storage'; 
 import HomeScreen from './HomeScreen'; 
 import ScheduleScreen from './ScheduleScreen';
 import {SEE_ALL_POSTERS,POST_VIEW,POST_UPLOAD,POST_DELETE,POST_LOAD,COMMENT_UPLOAD,COMMENT_DELETE,POST_INFO}from '../queries'

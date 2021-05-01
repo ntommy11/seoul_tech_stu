@@ -51,7 +51,9 @@ export type NativeStackNavigationHelpers = NavigationHelpers<
   NativeStackNavigationEventMap
 >;
 
-export type NativeStackNavigationConfig = Record<string, unknown>;
+// We want it to be an empty object beacuse navigator does not have any additional config
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type NativeStackNavigationConfig = {};
 
 export type NativeStackNavigationOptions = {
   /**
@@ -146,6 +148,7 @@ export type NativeStackNavigationOptions = {
    * Style object for header large title. Supported properties:
    * - fontFamily
    * - fontSize
+   * - color
    *
    * Only supported on iOS.
    *
@@ -154,6 +157,7 @@ export type NativeStackNavigationOptions = {
   headerLargeTitleStyle?: {
     fontFamily?: string;
     fontSize?: number;
+    fontWeight?: string;
     color?: string;
   };
   /**
@@ -189,11 +193,13 @@ export type NativeStackNavigationOptions = {
    * Style object for header title. Supported properties:
    * - fontFamily
    * - fontSize
+   * - fontWeight (iOS only)
    * - color
    */
   headerTitleStyle?: {
     fontFamily?: string;
     fontSize?: number;
+    fontWeight?: string;
     color?: string;
   };
   /**
@@ -217,11 +223,26 @@ export type NativeStackNavigationOptions = {
    */
   replaceAnimation?: ScreenProps['replaceAnimation'];
   /**
+   * In which orientation should the screen appear.
+   * The following values are currently supported:
+   * - "default" - resolves to "all" without "portrait_down" on iOS. On Android, this lets the system decide the best orientation.
+   * - "all" – all orientations are permitted
+   * - "portrait" – portrait orientations are permitted
+   * - "portrait_up" – right-side portrait orientation is permitted
+   * - "portrait_down" – upside-down portrait orientation is permitted
+   * - "landscape" – landscape orientations are permitted
+   * - "landscape_left" – landscape-left orientation is permitted
+   * - "landscape_right" – landscape-right orientation is permitted
+   */
+  screenOrientation?: ScreenStackHeaderConfigProps['screenOrientation'];
+  /**
    * How the screen should appear/disappear when pushed or popped at the top of the stack.
    * The following values are currently supported:
    * - "default" – uses a platform default animation
    * - "fade" – fades screen in or out
    * - "flip" – flips the screen, requires stackPresentation: "modal" (iOS only)
+   * - "slide_from_right" - slide in the new screen from right to left (Android only, resolves to default transition on iOS)
+   * - "slide_from_left" - slide in the new screen from left to right (Android only, resolves to default transition on iOS)
    * - "none" – the screen appears/dissapears without an animation
    */
   stackAnimation?: ScreenProps['stackAnimation'];

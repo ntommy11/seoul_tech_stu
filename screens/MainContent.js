@@ -13,8 +13,7 @@ import { createStackNavigator,HeaderBackButton } from '@react-navigation/stack';
 
 import { Ionicons, FontAwesome, AntDesign,Feather  } from '@expo/vector-icons';
 import { AuthContext, UserContext,IdContext } from '../components/context';
-import AsyncStorage from '@react-native-community/async-storage';
-//import Func from './MainContentSub/'
+import AsyncStorage from '@react-native-async-storage/async-storage';//import Func from './MainContentSub/'
   
 import HomeScreen from './HomeScreen'; 
 import ScheduleScreen from './ScheduleScreen';

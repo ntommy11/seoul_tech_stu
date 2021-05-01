@@ -7,7 +7,7 @@ import { useIsFocused, useFocusEffect } from '@react-navigation/native';
 import { Ionicons, EvilIcons} from '@expo/vector-icons'; 
 import { WebView } from 'react-native-webview'
 import { ScrollView } from 'react-native-gesture-handler';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Notifications from 'expo-notifications';
 import * as WebBrowser from 'expo-web-browser';
 

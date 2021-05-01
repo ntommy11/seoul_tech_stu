@@ -8,8 +8,7 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 
 import * as Notifications from 'expo-notifications';
-import AsyncStorage from '@react-native-community/async-storage';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const ICSname = "학교생활도우미 일정";               // 내보내기 할때 사용할 캘린더 이름             
 const NOW = new Date();                         // 현재 시간
 const TIMEZONE = NOW.getTimezoneOffset()*60000; // DB와 타임존 싱크를 맞추기 위한 상수 

@@ -5,7 +5,7 @@ import MainScreen from './screens/MainScreen';
 import RootStackScreen from './screens/RootStackScreen';
 
 import { AuthContext, UserContext } from './components/context';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import * as Notifications from 'expo-notifications';
 
